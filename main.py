@@ -46,11 +46,11 @@ def update_bus_locations():
         # Emit the update to the client
         socketio.emit('update_map')
 
-# Set up a background thread to update the map every 1 seconds
+# Set up a background thread to update the map every 1 second
 def background_update():
     while True:
         update_bus_locations()
-        time.sleep(1)  # Update every 1 seconds
+        time.sleep(1)  # Update every 1 second
 
 # Route for rendering the map in the browser
 @app.route("/")
